@@ -13,7 +13,7 @@ const myItems = new Vue ({
 
         contacts: [
             {
-                name: 'Michele',
+                name: 'Lufy',
                 avatar: '_1',
                 visible: true,
                 messages: [
@@ -35,7 +35,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Fabio',
+                name: 'Zoro',
                 avatar: '_2',
                 visible: true,
                 messages: [
@@ -57,7 +57,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Samuele',
+                name: 'Nami',
                 avatar: '_3',
                 visible: true,
                 messages: [
@@ -79,7 +79,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Alessandro B.',
+                name: 'Robin',
                 avatar: '_4',
                 visible: true,
                 messages: [
@@ -96,7 +96,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Alessandro L.',
+                name: 'Sanji',
                 avatar: '_5',
                 visible: true,
                 messages: [
@@ -113,7 +113,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Claudia',
+                name: 'Chopper',
                 avatar: '_6',
                 visible: true,
                 messages: [
@@ -135,7 +135,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Federico',
+                name: 'Brook',
                 avatar: '_7',
                 visible: true,
                 messages: [
@@ -152,7 +152,7 @@ const myItems = new Vue ({
                 ],
             },
             {
-                name: 'Davide',
+                name: 'Usopp',
                 avatar: '_8',
                 visible: true,
                 messages: [

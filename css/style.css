@@ -11,7 +11,7 @@
 }
 
 .green {
-    background-color: rgb(25, 145, 85);
+    background-color: rgb(19, 95, 57);
     height: 100px
 }
 
@@ -26,7 +26,7 @@
     background-color: white;
     position: absolute;
     top: 30px;
-    bottom: 30px;
+    height: 700px;
     left: 100px;
     right: 100px;
 }
@@ -41,7 +41,7 @@
 /* Container Centrale - Block left*/
 .display_left {
     float: left;
-    width: 40%;
+    width: 30%;
 }
 
 .display_flex {
@@ -53,20 +53,25 @@
 
 /* Container Centrale - Block left - blocco logo + icone */
 .logo_icons {
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: green;
+    background-color: rgb(162, 156, 156);
+    padding: 5px;
+    border-right: 1px solid grey;
 }
 
 .logo_icons .imagine {
     display: flex;
     align-items: center;
+    margin-left: 5px;
 }
 
 .logo_icons img {
-    width: 20%;
+    width: 30px;
     height: auto;
-    justify-content: space-between;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .logo_icons .icons {
@@ -76,6 +81,7 @@
 
 .logo_icons .icons i {
     margin-right: 20px;
+    color: rgb(118, 117, 117);
 }
 
 
@@ -83,8 +89,19 @@
 .bck_aqua {
     display: flex;
     height: 50px;
-    background-color: aqua;
+    background-color: rgb(114, 198, 235);
     align-items: center;
+}
+
+.bck_aqua .bell {
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    margin: 0px 10px;
+}
+
+.bck_aqua .bell i {
+    color: rgb(114, 198, 235);
 }
 
 .bck_aqua .notifiche {
@@ -92,11 +109,31 @@
     flex-direction: column;
 }
 
+.bck_aqua .notifiche p {
+    font-size: 10px;
+    color: grey;
+    text-decoration: underline;
+}
 
 /* Container Centrale - Block left - blocco input */
 
+.myInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.myInput i {
+    margin-left: 18px;
+    color: grey;
+}
+
 .myInput input {
-    width: 90%;
+    width: 85%;
+    height: 30px;
+    border: none;
+    margin-right: 5px;
 }
 
 
@@ -104,27 +141,131 @@
 .contatti {
     display: flex;
     flex-direction: column;
-    background-color: orange;
+    padding: 5px;
 }
 
 .nomeContatto {
+    height: 60px;
     display: flex;
     align-items: center;
-    height: 50px;
+    margin-left: 5px;
+    border-top: 1px solid rgb(208, 205, 205);
 }
 
 .nomeContatto img {
-    width: 10%;
+    width: 30px;
     height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
+.last_message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.last_message .nome {
+    font-size: 15px;
+    font-weight: bold;
+}
 
+.last_message .message {
+    font-size: 7px;
+    color: grey;
+}
 
 
 
 /* Container Centrale - Block right */
 .display_right {
     float: left;
-    width: 60%;
+    width: 70%;
+}
+
+
+/* Container Centrale - Block right - blocco nome contatto selezionato + icone */
+.logo_contatto {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(162, 156, 156);
+    padding: 5px;
+}
+
+.logo_contatto .imagine {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.logo_contatto .imagine img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.last_access {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.last_access .nome {
+    font-size: 15px;
+}
+
+.last_access .message {
+    font-size: 9px;
+    color: rgb(101, 98, 98);
+}
+
+.logo_contatto .icons {
+    display: flex;
+    align-items: center;
+}
+
+.logo_contatto .icons i {
+    margin-right: 15px;
+    color: rgb(118, 117, 117);
+}
+
+
+/* Container Centrale - Block right - blocco chat */
+.display_chat {
+    height: 600px;
+    background-image: url("../img/sfondo.jpg");
+}
+
+
+/* Container Centrale - Block right - blocco in basso */
+.write_chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(225, 200, 200);
+}
+
+.write_chat i:first-of-type {
+    color: grey;
+    margin-left: 22px;
+}
+
+.write_chat i:last-of-type {
+    color: grey;
+    margin-right: 25px;
+}
+
+.write_chat input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    margin-right: 5px;
+}
+
+.write_chat input {
+    padding-left: 10px;
 }

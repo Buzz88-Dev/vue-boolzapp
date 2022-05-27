@@ -34,7 +34,7 @@
 
                     <!-- blocco sfondo azzurro -->
                     <div class="bck_aqua">
-                        <div>
+                        <div class="bell">
                             <i class="fas fa-bell-slash"></i>
                         </div>
 
@@ -55,7 +55,10 @@
 
                         <div v-for="(element, index) in contacts" :key="index" :class="classContatti">
                             <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
-                            <span>{{ element.name }}</span>
+                            <div class="last_message">
+                                <span class="nome">{{ element.name }}</span>
+                                <span class="message">Inserire l' ultimo messaggio inviato</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,6 +67,39 @@
 
 
             <div class="display_right">
+
+                <!-- blocco nome contatto selezionato + icone -->
+                <div class="logo_contatto">
+                    <div class="imagine">
+                        <img src="img/avatar_1.jpg" alt="">
+
+                        <div class="last_access">
+                            <span class="nome">Omar</span>
+                            <p class="message">Ultimo accesso oggi alle 12:00</p>
+                        </div>
+            
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+
+                <div class="display_chat">
+
+                </div>
+
+
+                <div class="write_chat">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
+
+
+
 
 
             </div>
