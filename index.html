@@ -53,8 +53,8 @@
                     <!-- blocco contatti -->
                     <div class="contatti">
 
-                        <div class="imagine" v-for="(element, index) in contacts" :key="index">
-                            <img :src="element.avatar" alt="#">
+                        <div v-for="(element, index) in contacts" :key="index" :class="classContatti">
+                            <img :src="percorsoImmagine + element.avatar + percorsoFinaleImmagine">
                             <span>{{ element.name }}</span>
                         </div>
                     </div>

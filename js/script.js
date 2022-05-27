@@ -5,6 +5,12 @@ const myItems = new Vue ({
 
     data : {
 
+        classContatti : "nomeContatto",
+
+        percorsoInizialeImmagine : "img/avatar",
+
+        percorsoFinaleImmagine : ".jpg",
+
         contacts: [
             {
                 name: 'Michele',

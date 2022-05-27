@@ -99,11 +99,23 @@
     width: 90%;
 }
 
+
+/* Container Centrale - Block left - blocco contatti */
 .contatti {
     display: flex;
     flex-direction: column;
     background-color: orange;
 }
+
+.nomeContatto {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+
+
+
 
 
 /* Container Centrale - Block right */
