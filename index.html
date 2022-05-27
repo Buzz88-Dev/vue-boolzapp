@@ -54,7 +54,7 @@
                     <div class="contatti">
 
                         <div v-for="(element, index) in contacts" :key="index" :class="classContatti">
-                            <img :src="percorsoImmagine + element.avatar + percorsoFinaleImmagine">
+                            <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
                             <span>{{ element.name }}</span>
                         </div>
                     </div>
