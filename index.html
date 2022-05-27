@@ -57,7 +57,7 @@
                             <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
                             <div class="last_message">
                                 <span class="nome">{{ element.name }}</span>
-                                <span class="message">Inserire l' ultimo messaggio inviato</span>
+                                <div v-for="item in element.messages" class="message">{{ item.message }}</div>
                             </div>
                         </div>
                     </div>
