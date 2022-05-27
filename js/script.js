@@ -172,7 +172,8 @@ const myItems = new Vue ({
                         status: 'received'
                     }
                 ],
-            }
+            },
+            
         ]
         
     }
