@@ -9,13 +9,83 @@
     <title>Boolzapp</title>
 </head>
 <body>
+
+    <div class="big_container">
+
+        <div class="green"></div>
+
+       
+        <div class="container" id="container_Vue">
+            <div class="display_left">
+                <div class="display_flex">
+
+                    <!-- blocco logo + icone -->
+                    <div class="logo_icons">
+                        <div class="imagine">
+                            <img src="img/immagine.jpeg" alt="Omar">
+                            <span>Omar</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                    <!-- blocco sfondo azzurro -->
+                    <div class="bck_aqua">
+                        <div>
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+
+                        <div class="notifiche">
+                            <h6>Ricevi notifiche di nuovi messaggi</h6>
+                            <p>Attiva notifiche desktop</p>
+                        </div>                      
+                    </div>
+
+                    <!-- blocco input -->
+                    <div class="myInput">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+                    <!-- blocco contatti -->
+                    <div class="contatti">
+
+                        <div class="imagine" v-for="(element, index) in contacts" :key="index">
+                            <img :src="element.avatar" alt="#">
+                            <span>{{ element.name }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="display_right">
+
+
+            </div>
+            
+
+
+        </div>
+
+
+        <div class="grey"></div>
+
+    </div>
+
+
+
     
 
 
 
 
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
