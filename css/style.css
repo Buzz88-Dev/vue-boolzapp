@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI*/
+.big_container {
+    position: relative;
+    height: 100vh;
+}
+
+.green {
+    background-color: rgb(25, 145, 85);
+    height: 100px
+}
+
+.grey {
+    background-color: rgb(175, 168, 168);
+    height: calc(100% - 100px);
+}
+
+
+/* Container Centrale*/
+.container {
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 100px;
+    right: 100px;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Container Centrale - Block left*/
+.display_left {
+    float: left;
+    width: 40%;
+}
+
+.display_flex {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+/* Container Centrale - Block left - blocco logo + icone */
+.logo_icons {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+}
+
+.logo_icons .imagine {
+    display: flex;
+    align-items: center;
+}
+
+.logo_icons img {
+    width: 20%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.logo_icons .icons {
+    display: flex;
+    align-items: center;
+}
+
+.logo_icons .icons i {
+    margin-right: 20px;
+}
+
+
+/* Container Centrale - Block left - blocco sfondo azzurro */
+.bck_aqua {
+    display: flex;
+    height: 50px;
+    background-color: aqua;
+    align-items: center;
+}
+
+.bck_aqua .notifiche {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Container Centrale - Block left - blocco input */
+
+.myInput input {
+    width: 90%;
+}
+
+.contatti {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+}
+
+
+/* Container Centrale - Block right */
+.display_right {
+    float: left;
+    width: 60%;
+}
