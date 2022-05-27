@@ -16,9 +16,9 @@
 
        
         <div class="container" id="container_Vue">
+            <!-- DISPLAY LEFT -->
             <div class="display_left">
                 <div class="display_flex">
-
                     <!-- blocco logo + icone -->
                     <div class="logo_icons">
                         <div class="imagine">
@@ -52,13 +52,12 @@
 
                     <!-- blocco contatti -->
                     <div class="contatti">
-
                         <div v-for="(element, index) in contacts" :key="index" :class="classContatti">
                             <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
                             <div class="last_message">
                                 <span class="nome">{{ element.name }}</span>
                                 <div v-for="(item, i) in element.messages" :key="i" class="message">
-                                    <span v-if="(item[i] === (element.messages.length - 1))">{{item.message}}</span>
+                                    <span v-if="(i === (element.messages.length - 1))">{{item.message}}</span>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +65,8 @@
                 </div>
             </div>
 
-
-
+            <!-- DISPLAY RIGHT -->
             <div class="display_right">
-
                 <!-- blocco nome contatto selezionato + icone -->
                 <div class="logo_contatto">
                     <div class="imagine">
@@ -88,41 +85,27 @@
                     </div>
                 </div>
 
-
                 <div class="display_chat">
-
+                    <div class="messaggio" v-for="(element, index) in contacts" :key="index">
+                        <div v-for="(item, i) in element.messages">
+                            
+                        </div>
+                        
+                    </div>
                 </div>
-
 
                 <div class="write_chat">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Scrivi un messaggio">
                     <i class="fas fa-microphone"></i>
                 </div>
-
-
-
-
-
             </div>
-            
-
-
         </div>
 
 
         <div class="grey"></div>
 
     </div>
-
-
-
-    
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
