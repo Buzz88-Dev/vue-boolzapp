@@ -57,7 +57,9 @@
                             <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
                             <div class="last_message">
                                 <span class="nome">{{ element.name }}</span>
-                                <div v-for="item in element.messages" class="message">{{ item.message }}</div>
+                                <div v-for="(item, i) in element.messages" :key="i" class="message">
+                                    <span v-if="(item[i] === (element.messages.length - 1))">{{item.message}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
