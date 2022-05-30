@@ -1,278 +1,280 @@
+/* REGOLE GENERALI*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* REGOLE GENERALI*/
-.big_container {
-    position: relative;
-    height: 100vh;
+body {
+    font-family: 'Lato', sans-serif;
 }
 
-.green {
-    background-color: rgb(19, 95, 57);
-    height: 100px
+/* main */
+main {
+    position: relative; /* position relative perchè il div #boolzapp è in position absolute */
 }
 
-.grey {
-    background-color: rgb(175, 168, 168);
-    height: calc(100% - 100px);
+.background-up {
+    width: 100%;
+    height: 20vh;
+    background-color: #009688;
 }
 
+.background-down {
+    width: 100%;
+    height: 80vh;
+    background-color: #dbdbd4;
+}
 
-/* Container Centrale*/
-.container {
-    background-color: white;
+/* #boolzapp */
+main #boolzapp {
     position: absolute;
-    top: 30px;
-    height: 700px;
-    left: 100px;
-    right: 100px;
-}
-
-.container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Container Centrale - Block left*/
-.display_left {
-    float: left;
-    width: 30%;
-}
-
-.display_flex {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-
-/* Container Centrale - Block left - blocco logo + icone */
-.logo_icons {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(162, 156, 156);
-    padding: 5px;
-    border-right: 1px solid grey;
-}
-
-.logo_icons .imagine {
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-}
-
-.logo_icons img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.logo_icons .icons {
-    display: flex;
-    align-items: center;
-}
-
-.logo_icons .icons i {
-    margin-right: 20px;
-    color: rgb(118, 117, 117);
-}
-
-
-/* Container Centrale - Block left - blocco sfondo azzurro */
-.bck_aqua {
-    display: flex;
-    height: 50px;
-    background-color: rgb(114, 198, 235);
-    align-items: center;
-}
-
-.bck_aqua .bell {
-    border-radius: 50%;
-    background-color: white;
-    padding: 5px;
-    margin: 0px 10px;
-}
-
-.bck_aqua .bell i {
-    color: rgb(114, 198, 235);
-}
-
-.bck_aqua .notifiche {
-    display: flex;
-    flex-direction: column;
-}
-
-.bck_aqua .notifiche p {
-    font-size: 10px;
-    color: grey;
-    text-decoration: underline;
-}
-
-/* Container Centrale - Block left - blocco input */
-
-.myInput {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-}
-
-.myInput i {
-    margin-left: 18px;
-    color: grey;
-}
-
-.myInput input {
-    width: 85%;
-    height: 30px;
-    border: none;
-    margin-right: 5px;
-}
-
-
-/* Container Centrale - Block left - blocco contatti */
-.contatti {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-
-.nomeContatto {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-    border-top: 1px solid rgb(208, 205, 205);
-}
-
-.nomeContatto img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.last_message {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.last_message .nome {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.last_message .message {
-    font-size: 7px;
-    color: grey;
-}
-
-
-
-/* Container Centrale - Block right */
-.display_right {
-    float: left;
-    width: 70%;
-}
-
-
-/* Container Centrale - Block right - blocco nome contatto selezionato + icone */
-.logo_contatto {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(162, 156, 156);
-    padding: 5px;
-}
-
-.logo_contatto .imagine {
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-}
-
-.logo_contatto .imagine img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-
-.last_access {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.last_access .nome {
-    font-size: 15px;
-}
-
-.last_access .message {
-    font-size: 9px;
-    color: rgb(101, 98, 98);
-}
-
-.logo_contatto .icons {
-    display: flex;
-    align-items: center;
-}
-
-.logo_contatto .icons i {
-    margin-right: 15px;
-    color: rgb(118, 117, 117);
-}
-
-
-/* Container Centrale - Block right - blocco chat */
-.display_chat {
-    height: 600px;
-    background-image: url("../img/sfondo.jpg");
-    overflow-y: scroll;
-}
-
-.messaggio {
-    width: 100px;
-    height: 50px;
-    margin: 10px 50px;
-}
-
-
-/* Container Centrale - Block right - blocco in basso */
-.write_chat {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-color: rgb(225, 200, 200);
-}
-
-.write_chat i:first-of-type {
-    color: grey;
-    margin-left: 22px;
-}
-
-.write_chat i:last-of-type {
-    color: grey;
-    margin-right: 25px;
-}
-
-.write_chat input {
     width: 80%;
-    height: 30px;
-    border: none;
-    margin-right: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.write_chat input {
-    padding-left: 10px;
+/* Colonna sinistra */
+.contacts {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #d6d6d6;
+    /* debug */
+    background-color: #ffffff;
+}
+
+/* Colonna sinistra - myProfile */
+.contacts .myProfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #eaeaea;
+}
+
+.contacts .myProfile .img-Profile {
+    display: flex;
+    align-items: center;
+}
+
+.contacts .myProfile .img-Profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.contacts .myProfile .myProfile-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts .myProfile .myProfile-options i {
+    font-size: 15px;
+    color: #b1b1b1;
+    margin-left: 10px;
+}
+
+/* Colonna sinistra - notifiche */
+.contacts .notifiche {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #8edafc;
+}
+
+.contacts .notifiche .icon-notifica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f2fbff;
+    margin-right: 10px;
+}
+
+.contacts .notifiche .icon-notifica i {
+    font-size: 20px;
+    color: #8edafc;
+}
+
+.contacts .notifiche .text-notifica {
+    text-decoration: underline;
+    color: #6d7983;
+    font-size: 12px;
+}
+
+/* Colonna sinistra - search-contact */
+.contacts .search-contact {
+    padding: 5px;
+    background-color: #fafafa;
+}
+
+.contacts .search-contact div span {
+    background-color: white;
+    width: 50px;
+    justify-content: center;
+}
+
+.contacts .search-contact div span i {
+    color: #b1b1b1;
+    font-size: 16px;
+}
+
+/* Colonna sinistra - all contacts */
+.contacts .all-contacts {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.contacts .all-contacts .preview-contact {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+    border-top: 1px solid #f5f5f5;
+    justify-content: space-between;
+}
+
+.contacts .all-contacts .preview-contact {
+    background-color: #e9ebeb;
+}
+
+.contacts .all-contacts .active {
+    background-color: rgb(237, 176, 176);
+}
+
+.contacts .all-contacts .preview-contact .img-user {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contacts .all-contacts .preview-contact .img-user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.contacts .preview-contact .name-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contacts .all-contacts .preview-contact .name-chat .message span {
+    color: #b6b9bb;
+    font-size: 13px;
+}
+
+/* Colonna destra */
+.chat {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    /* debug */
+    background-color: #ffffff;
+}
+
+/* Colonna destra - dati del contatto */
+.chat .data-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaeaea;
+}
+
+.chat .data-contact div {
+    display: flex;
+    align-items: center;
+}
+
+.chat .data-contact div img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.chat .data-contact p span {
+    font-size: 14px;
+    color: #6d7274;
+}
+
+.chat .data-contact .contactOption {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chat .data-contact .contactOption i {
+    font-size: 15px;
+    color: #b1b1b1;
+    margin-left: 10px;
+}
+
+/* Colonna destra - body contact */
+.chat .body-chat {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 7%;
+    overflow-y: scroll;
+    background-color: #e5ddd5;
+    height: 100%;
+    row-gap: 10px;
+    background-image: url('../img/sfondo.jpg');
+}
+
+.chat .body-chat .messageSent {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 36%;
+    background-color: #d5f9ba;
+    border-radius: 10px;
+}
+
+.chat .body-chat .messageReceived {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 36%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.chat .body-chat span {
+    align-self: flex-end;
+    font-size: 11px;
+    color: #b6b9bb;
+}
+
+/* Colonna destra - input chat */
+.chat .input-chat {
+    padding: 10px;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+}
+
+.chat .input-chat .emoticon {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.chat .input-chat .emoticon i {
+    font-size: 20px;
+    color: #6b7376;
 }
