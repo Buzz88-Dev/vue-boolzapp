@@ -132,7 +132,7 @@
                                     <i class="far fa-smile"></i>
                                 </div>
 
-                                <input class="form-control" id="nuovo-messaggio" type="text" placeholder="Scrivi un nuovo messaggio">
+                                <input class="form-control" type="text" placeholder="Scrivi un nuovo messaggio" v-model="newMessage" @keyup.enter="addNewMessage">
 
                                 <div class="emoticon">
                                     <i class="fas fa-microphone"></i>
