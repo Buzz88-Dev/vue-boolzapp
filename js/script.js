@@ -19,7 +19,7 @@
 //     Nel div con class preview-contact creo una funzione che si attiva con un click
 //     @click="selectChat()"
 //     al suo interno gli passo l index: @click="selectChat(index)"
-//     quando si verifica la seguente condizione, il div si colora di sfondo rosso
+//     quando si verifica la seguente condizione, il div si colora di sfondo verde
 //     :class="chatIndex === index ? 'active' : ''"
 //     ora interagisco con la class="chat"
 //     se l index corrisponde al valore di chatIndex
@@ -27,7 +27,28 @@
 //     nel div data-contact inserisco l immagine e nome
 //     nel div body-chat stampo il messaggio e l orario con caratteristiche in base allo status
 
- 
+// Milestone 3
+//    Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” 
+//    il testo viene aggiunto al thread sopra, come messaggio verde
+//    Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
+//    l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+//    creo una variabile newMessage : " ",
+//    inserisco v-model="newMessage"
+//    nell input dove scrivo il messaggio; con v-model rimane in ascolto
+//    @keyup.enter="addNewMessage" creo la funzione e con enter prendo la stringa inserita
+//    costruisco la funzione che mi stampa il messaggio scitto e prelevato all interno della chat del contatto selezionato
+//    analizzare bene: this.contacts[this.chatIndex].messages.push(message);
+
+// Milestone 4
+//    Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
+//    vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
+//    (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+// Milestone 5 - opzionale
+//    Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette 
+//    di cancellare il messaggio selezionato
+//    Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
 
 const myItems = new Vue ({
 
@@ -204,7 +225,9 @@ const myItems = new Vue ({
 
         percorsoFinaleImmagine : ".jpg",
 
-        chatIndex : 0,    
+        chatIndex : 0,  
+        
+        newMessage : " ",
         
     },
 
@@ -214,8 +237,23 @@ const myItems = new Vue ({
             this.chatIndex = index;
        },
 
+       addNewMessage(){
 
-    }
-    
+            // messaggio = this.newMessage.trim(); --- analizzare .trim()
+
+            if(this.messaggio !== " "){
+                const message = {
+                    date : 'dAprile',
+                    // date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
+                    message : this.newMessage,
+                    status : 'sent'
+                };
+
+                this.contacts[this.chatIndex].messages.push(message);
+                this.newMessage = " ";
+            }
+       },
+    }    
 })
 
+d
