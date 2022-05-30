@@ -146,7 +146,7 @@ main #boolzapp {
 }
 
 .contacts .all-contacts .active {
-    background-color: rgb(237, 176, 176);
+    background-color: white;
 }
 
 .contacts .all-contacts .preview-contact .img-user {
@@ -255,7 +255,7 @@ main #boolzapp {
 }
 
 .chat .body-chat span {
-    align-self: flex-end;
+    align-self: flex-start;
     font-size: 11px;
     color: #b6b9bb;
 }
