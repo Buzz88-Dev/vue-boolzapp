@@ -231,9 +231,9 @@ const myItems = new Vue ({
 
         chatIndex : 0,  
         
-        newMessage : " ",
+        newMessage : "",
 
-        writeContact : " ",
+        writeContact : "",
         
     },
 
@@ -247,7 +247,7 @@ const myItems = new Vue ({
 
             // messaggio = this.newMessage.trim(); --- analizzare .trim()
 
-            if(this.messaggio !== " "){
+            if(this.messaggio !== ""){
                 const message = {
                     date : 'data',
                     date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
@@ -274,18 +274,19 @@ const myItems = new Vue ({
        },
 
        searchContact(){
-            if (this.writeContact !== " "){
+            if (this.writeContact !== ""){
+                console.log(this.writeContact);
                 for (let i = 0; i < this.contacts.length; i++){
-                    let stringa = this.contacts[i].name.toLowerCase();
-                    if (!stringa.includes(this.writeContact)){
+                    let nome = this.contacts[i].name.toLowerCase();
+                    console.log(nome);
+                    if (nome.includes(this.writeContact)){
+                        this.contacts[i].visible = true;
+                    } else {
                         this.contacts[i].visible = false;
                     }
                 }
             }
        },
-
-
     }    
 })
 
-d
