@@ -120,7 +120,7 @@
 
                             <!-- Colonna destra - body contact -->
                             <div class="body-chat">
-                                <div v-for="(item ,i) in element.messages" :class="item.status === 'sent' ? 'messageSent' : 'messageReceived'" :key="i" @click="optionMessage(i)">
+                                <div v-for="(item ,i) in element.messages" :class="item.status === 'sent' ? 'messageSent' : 'messageReceived'" :key="i" @click="deleteMessage(i)">
                                     <p>{{item.message}}</p>
                                     <p :class="changeClass">Elimina messaggio?</p>
                                     <span>{{item.date}}</span>
