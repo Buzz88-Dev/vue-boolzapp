@@ -251,8 +251,22 @@ const myItems = new Vue ({
 
                 this.contacts[this.chatIndex].messages.push(message);
                 this.newMessage = " ";
+                setTimeout(this.messageReply, 1000);
             }
        },
+
+       messageReply(){
+
+            let message = {
+                date : "data",
+                message : "Ok",
+                status : "received"
+            };
+
+            this.contacts[this.chatIndex].messages.push(message);
+       },
+
+
     }    
 })
 
