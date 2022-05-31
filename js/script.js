@@ -280,7 +280,7 @@ const myItems = new Vue ({
 
         writeContact : "",
 
-        deleteClass : "displayNone",
+        changeClass : "displayNone",
         
     },
 
@@ -345,9 +345,9 @@ const myItems = new Vue ({
             console.log(this.contacts[this.chatIndex].messages[index].message)
             console.log(this.contacts[this.chatIndex].messages[index]);
             if (this.contacts[this.chatIndex].messages[index]){
-                this.deleteClass = "displayBlock";
+                this.changeClass = "displayBlock";
             } else {
-                this.deleteClass = "displayNone";
+                this.changeClass = "displayNone";
             }
 
             // this.contacts[this.chatIndex].messages.splice(index,1);
