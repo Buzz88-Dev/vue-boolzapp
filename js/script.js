@@ -43,11 +43,17 @@
 //    Per poter leggere una data in un formato diverso dal formato standard ISO 8601, 
 //    è necessario aggiungere a day.js il plugin CustomParseFormat: https://day.js.org/docs/en/parse/string-format
 //    Per installarlo, recuperare il link alla cdn e usarlo come in questo esempio: https://day.js.org/docs/en/plugin/loading-into-browser
+//    analizzare i processi mediante le console.log
 
 // Milestone 4
 //    Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
 //    vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
 //    (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+//    Inserisco un v-model="writeContact" nell input della search-contact (rimango in ascolto di quello che digito)
+//    creo @keyup.enter="searchContact" in input (al click di enter si attiva la funzione searchContact)
+//    mi costruisco la mia funzione searchContact e analizzo la situazione mediante console.log --- si attiva cliccando enter
+//    inserisco il v-if di visualizzazione nella class="preview-contact"
+//    creo una funzione restorationContact() che mi riporta tutti i contatti allo stato visible true quando tolgo tutte le stringhe dall input
 
 // Milestone 5 - opzionale
 //    Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette 
@@ -241,39 +247,39 @@ const myItems = new Vue ({
 
        selectChat(index){
             this.chatIndex = index;
+            console.log(this.chatIndex);
        },
 
        addNewMessage(){
-
             // messaggio = this.newMessage.trim(); --- analizzare .trim()
-
-            if(this.messaggio !== ""){
+            if(this.newMessage !== ""){
+                console.log(this.newMessage)
                 const message = {
                     date : 'data',
                     date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
                     message : this.newMessage,
                     status : 'sent'
                 };
-
+                console.log(message);
                 this.contacts[this.chatIndex].messages.push(message);
+                console.log(this.contacts[this.chatIndex].messages);
                 this.newMessage = " ";
                 setTimeout(this.messageReply, 1000);
             }
        },
 
        messageReply(){
-
             let message = {
                 date : "data",
                 date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
                 message : "Ok",
                 status : "received"
             };
-
             this.contacts[this.chatIndex].messages.push(message);
        },
 
        searchContact(){
+            this.restorationContact()
             if (this.writeContact !== ""){
                 console.log(this.writeContact);
                 for (let i = 0; i < this.contacts.length; i++){
@@ -287,6 +293,12 @@ const myItems = new Vue ({
                 }
             }
        },
+
+        restorationContact(){
+           for (let i = 0; i < this.contacts.length; i++){
+               this.contacts[i].visible = true;
+           }
+        },
     }    
 })
 
