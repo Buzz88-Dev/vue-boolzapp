@@ -51,7 +51,7 @@ main #boolzapp {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 11px;
     background-color: #eaeaea;
 }
 
@@ -179,8 +179,6 @@ main #boolzapp {
     height: 95vh;
     display: flex;
     flex-direction: column;
-    /* debug */
-    background-color: #ffffff;
 }
 
 /* Colonna destra - dati del contatto */
@@ -189,6 +187,7 @@ main #boolzapp {
     align-items: center;
     justify-content: space-between;
     background-color: #eaeaea;
+    padding: 0px 10px;
 }
 
 .chat .data-contact div {
@@ -203,6 +202,10 @@ main #boolzapp {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
+}
+
+.chat .data-contact p {
+    padding-top: 10px;
 }
 
 .chat .data-contact p span {
@@ -258,6 +261,14 @@ main #boolzapp {
     align-self: flex-start;
     font-size: 11px;
     color: #b6b9bb;
+}
+
+.chat .body-chat .displayNone {
+    display: none;
+}
+
+.chat .body-chat .displayBlock {
+    display: block;
 }
 
 /* Colonna destra - input chat */
