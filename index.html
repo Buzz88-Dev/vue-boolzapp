@@ -67,7 +67,7 @@
 
                             <!-- Colonna sinistra - all contacts -->
                             <div class="all-contacts">
-                                <div class="preview-contact" :class="chatIndex === index ? 'active' : ''" v-for="(element, index) in contacts" :key="index" @click="selectChat(index)">
+                                <div class="preview-contact" :class="chatIndex === index ? 'active' : ''" v-for="(element, index) in contacts" :key="index" @click="selectChat(index)" v-if="element.visible === true">
                                     <div class="img-user">
                                         <img :src="percorsoInizialeImmagine + element.avatar + percorsoFinaleImmagine">
                                         <div class="name-chat">
