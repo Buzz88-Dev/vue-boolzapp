@@ -276,8 +276,8 @@ const myItems = new Vue ({
        searchContact(){
             if (this.writeContact !== " "){
                 for (let i = 0; i < this.contacts.length; i++){
-                    let stringa = this.contacts[i].name;
-                    if (stringa.includes(this.writeContact)){
+                    let stringa = this.contacts[i].name.toLowerCase();
+                    if (!stringa.includes(this.writeContact)){
                         this.contacts[i].visible = false;
                     }
                 }
