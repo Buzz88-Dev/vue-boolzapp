@@ -61,7 +61,7 @@
                             <div class="search-contact">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-search"></i></span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca un contatto">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca un contatto" v-model="writeContact" @keyup.enter="searchContact">
                                 </div>
                             </div>
 
@@ -153,7 +153,7 @@
     </main>
     <!-- collegamento Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> 
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- collegamento file js -->
     <script src="js/script.js"></script>
 </body>
