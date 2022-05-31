@@ -39,6 +39,10 @@
 //    @keyup.enter="addNewMessage" creo la funzione e con enter prendo la stringa inserita
 //    costruisco la funzione che mi stampa il messaggio scitto e prelevato all interno della chat del contatto selezionato
 //    analizzare bene: this.contacts[this.chatIndex].messages.push(message);
+//    creare la funzione messageReply() in risposta alla funzione addNewMessage() che si attiva dopo 1 secondo
+//    Per poter leggere una data in un formato diverso dal formato standard ISO 8601, 
+//    è necessario aggiungere a day.js il plugin CustomParseFormat: https://day.js.org/docs/en/parse/string-format
+//    Per installarlo, recuperare il link alla cdn e usarlo come in questo esempio: https://day.js.org/docs/en/plugin/loading-into-browser
 
 // Milestone 4
 //    Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
@@ -228,6 +232,8 @@ const myItems = new Vue ({
         chatIndex : 0,  
         
         newMessage : " ",
+
+        writeContact : " ",
         
     },
 
@@ -243,8 +249,8 @@ const myItems = new Vue ({
 
             if(this.messaggio !== " "){
                 const message = {
-                    date : 'dAprile',
-                    // date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
+                    date : 'data',
+                    date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
                     message : this.newMessage,
                     status : 'sent'
                 };
@@ -259,11 +265,23 @@ const myItems = new Vue ({
 
             let message = {
                 date : "data",
+                date : dayjs().format('DD/MM/YYYY HH-mm-ss'),
                 message : "Ok",
                 status : "received"
             };
 
             this.contacts[this.chatIndex].messages.push(message);
+       },
+
+       searchContact(){
+            if (this.writeContact !== " "){
+                for (let i = 0; i < this.contacts; i++){
+                    let stringa = this.contacts[i].name;
+                    if (stringa.includes(this.writeContact)){
+                        this.contacts[i].visible = false;
+                    }
+                }
+            }
        },
 
 
