@@ -341,7 +341,7 @@ const myItems = new Vue ({
            }
         },
 
-        optionMessage(index){
+        deleteMessage(index){
             console.log(this.contacts[this.chatIndex].messages[index].message)
             console.log(this.contacts[this.chatIndex].messages[index]);
             if (this.contacts[this.chatIndex].messages[index]){
