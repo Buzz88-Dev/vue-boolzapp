@@ -276,7 +276,7 @@ const myItems = new Vue ({
 
         chatIndex : 0,  
         
-        newMessage : "",
+        newMessage : " ",
 
         writeContact : "",
 
@@ -293,7 +293,7 @@ const myItems = new Vue ({
 
        addNewMessage(){
             // messaggio = this.newMessage.trim(); --- analizzare .trim()
-            if(this.newMessage !== ""){
+            if(this.newMessage !== " "){
                 console.log(this.newMessage)
                 const message = {
                     date : 'data',
@@ -344,13 +344,7 @@ const myItems = new Vue ({
         deleteMessage(index){
             console.log(this.contacts[this.chatIndex].messages[index].message)
             console.log(this.contacts[this.chatIndex].messages[index]);
-            if (this.contacts[this.chatIndex].messages[index]){
-                this.changeClass = "displayBlock";
-            } else {
-                this.changeClass = "displayNone";
-            }
-
-            // this.contacts[this.chatIndex].messages.splice(index,1);
+            this.contacts[this.chatIndex].messages.splice(index,1);
         }
     }    
 })
