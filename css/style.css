@@ -263,14 +263,6 @@ main #boolzapp {
     color: #b6b9bb;
 }
 
-.chat .body-chat .displayNone {
-    display: none;
-}
-
-.chat .body-chat .displayBlock {
-    display: block;
-}
-
 /* Colonna destra - input chat */
 .chat .input-chat {
     padding: 10px;
